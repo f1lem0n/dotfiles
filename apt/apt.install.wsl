@@ -11,3 +11,5 @@ pip
 git
 keychain
 man
+fd-find
+ripgrep
