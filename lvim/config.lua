@@ -20,16 +20,22 @@ lvim.format_on_save = {
 
 -- keymappings <https://www.lunarvim.org/docs/configuration/keybindings>
 lvim.leader = ";"
--- add your own keymapping
+
+-- ctrl-s save
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 
 -- move between buffers
-lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
-lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
+lvim.keys.normal_mode["L"] = ":BufferLineCycleNext<cr>"
+lvim.keys.normal_mode["H"] = ":BufferLineCyclePrev<cr>"
+lvim.keys.normal_mode["W"] = ":BufferKill<cr>"
+
+-- jumping to the next <>
+lvim.keys.insert_mode["<leader>j"] = "<esc>/<><cr>xs"
+lvim.keys.normal_mode["<leader>j"] = "<esc>/<><cr>xs"
 
 -- -- Use which-key to add extra bindings with the leader-key prefix
 -- lvim.builtin.which_key.mappings["W"] = { "<cmd>noautocmd w<cr>", "Save without formatting" }
--- lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<CR>", "Projects" }
+lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<cr>", "Projects" }
 
 -- -- Change theme settings
 -- lvim.colorscheme = "tokyonight-night"
