@@ -1,0 +1,8 @@
+#!/bin/bash
+
+mkdir $1/img -p
+cd $1
+touch ref.bib
+cat $HOME/Git/dotfiles/templates/.tex > $1.tex
+lvim $1.tex 
+

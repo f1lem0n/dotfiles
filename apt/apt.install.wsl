@@ -6,7 +6,6 @@ pandoc
 fzf
 tree
 cargo
-npm
 pip
 git
 keychain

@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# Find and remove all
+
+find . -name $1 -exec rm -rf {} \;
