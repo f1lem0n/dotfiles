@@ -99,11 +99,29 @@ fi
 
 # enable bash_aliases
 
-if [ -f "$HOME/bin/config/bash_aliases" ]; then
-    . "$HOME/bin/config/bash_aliases"
+if [ -f "$HOME/.bash_aliases" ]; then
+    . "$HOME/.bash_aliases"
 fi
 
 # enable user's private bin
 if [ -d "$HOME/.local/bin" ]; then
     PATH="$PATH:$HOME/.local/bin"
 fi
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/f1lem0n/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/f1lem0n/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/f1lem0n/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/f1lem0n/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+# ask for ssh password only at bash session start
+eval `keychain --agents ssh --eval id_rsa`
