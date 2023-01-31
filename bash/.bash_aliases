@@ -1,2 +1,7 @@
-alias ll="ls -l"
-alias la="ls -lA"
+alias ll='ls -l'
+alias la='ls -lA'
+alias vi='lvim'
+alias lv='lvim'
+alias src='source $HOME/.bashrc'
+alias o='cd $(find . -type d | fzf)'
+alias e='lvim $(find . -type f | fzf)'
