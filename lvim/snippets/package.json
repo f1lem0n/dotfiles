@@ -1,0 +1,19 @@
+{
+  "name": "nvim-snippets",
+  "author": "f1lem0n",
+  "engines": {
+    "vscode": "^1.11.0"
+  },
+  "contributes": {
+    "snippets": [
+      {
+        "language": "python",
+        "path": "./python.json"
+      },
+      {
+        "language": "latex",
+        "path": "./tex.json"
+      }
+    ]
+  }
+}

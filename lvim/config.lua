@@ -7,6 +7,11 @@
 vim.opt.shiftwidth = 4
 vim.opt.tabstop = 4
 vim.opt.relativenumber = true
+vim.opt.wrap = false
+vim.opt.splitright = true
+vim.opt.splitbelow = true
+vim.opt.completeopt = "menuone,noselect"
+vim.opt.shell = "/bin/bash"
 
 -- general
 lvim.log.level = "info"
@@ -22,7 +27,7 @@ lvim.format_on_save = {
 lvim.leader = ";"
 
 -- ctrl-s save
-lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
+lvim.keys.normal_mode["<c-s>"] = ":w<cr>"
 
 -- move between buffers
 lvim.keys.normal_mode["L"] = ":BufferLineCycleNext<cr>"
@@ -31,7 +36,7 @@ lvim.keys.normal_mode["W"] = ":BufferKill<cr>"
 
 -- jumping to the next <>
 lvim.keys.insert_mode["<leader>j"] = "<esc>/<><cr>xs"
-lvim.keys.normal_mode["<leader>j"] = "<esc>/<><cr>xs"
+lvim.keys.normal_mode["<leader>j"] = "/<><cr>xs"
 
 -- -- Use which-key to add extra bindings with the leader-key prefix
 -- lvim.builtin.which_key.mappings["W"] = { "<cmd>noautocmd w<cr>", "Save without formatting" }
@@ -78,31 +83,9 @@ lvim.builtin.treesitter.auto_install = true
 --   buf_set_option("omnifunc", "v:lua.vim.lsp.omnifunc")
 -- end
 
--- linters and formatters <https://www.lunarvim.org/docs/languages#lintingformatting>
-lvim.lang.python.formatters = {
-    {
-        exe = "black",
-    }
-}
-lvim.lang.python.linters = {
-    {
-        exe = "flake8"
-    }
-}
-
 -- Additional Plugins <https://www.lunarvim.org/docs/plugins#user-plugins>
-lvim.plugins = {
-    {
-        "folke/trouble.nvim",
-        cmd = "TroubleToggle",
-    },
-}
 
--- -- Autocommands (`:help autocmd`) <https://neovim.io/doc/user/autocmd.html>
--- vim.api.nvim_create_autocmd("FileType", {
---   pattern = "zsh",
---   callback = function()
---     -- let treesitter use bash highlight for zsh files as well
---     require("nvim-treesitter.highlight").attach(0, "bash")
---   end,
--- })
+require("user.actions")
+require("user.formatters")
+require("user.linters")
+require("user.autocmd")

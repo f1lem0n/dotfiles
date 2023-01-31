@@ -12,3 +12,7 @@ keychain
 man
 fd-find
 ripgrep
+python3-virtualenv
+virtualenv
+python3-venv
+npm

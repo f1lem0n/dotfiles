@@ -1,0 +1,18 @@
+#fixme
+{
+  "table": {
+    "prefix": "table:user",
+    "body": [
+        "\begin{table}[h]",
+        "\caption{<>}",
+        "\centering",
+        "% \rotatebox{90}{",
+        "% \resizebox{21cm}{!}{",
+        "   <>",
+        "% }}",
+        "\label{tab:<>}",
+        "\end{table}",
+        ],
+    "description": "Quickly create a table env"
+  }
+}
