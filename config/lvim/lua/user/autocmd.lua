@@ -16,19 +16,6 @@ A.nvim_create_autocmd("TermClose", {
     end
 })
 
--- Remove useless stuff from the terminal window and enter INSERT mode
-A.nvim_create_autocmd('TermOpen', {
-    callback = function(data)
-        A.nvim_command("$")
-        if not string.find(vim.bo[data.buf].filetype, '^[F][T]erm') then
-            A.nvim_set_option_value('number', false, { scope = 'local' })
-            A.nvim_set_option_value('relativenumber', false, { scope = 'local' })
-            A.nvim_set_option_value('signcolumn', 'no', { scope = 'local' })
-            -- A.nvim_command('startinsert')
-        end
-    end,
-})
-
 -- Jump to the last place in the file before exiting
 A.nvim_create_autocmd('BufReadPost', {
     callback = function(data)
@@ -52,3 +39,10 @@ A.nvim_create_autocmd("BufEnter", {
 
 -- Remove trailing whitespaces on write
 vim.cmd [[ autocmd BufWritePre * %s/\s\+$//e ]]
+
+-- Split vertically
+A.nvim_create_autocmd("WinNew", {
+    callback = function()
+        A.nvim_command("wincmd L")
+    end
+})
