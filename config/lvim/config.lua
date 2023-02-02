@@ -33,12 +33,12 @@ lvim.keys.normal_mode["<c-s>"] = ":w<cr>"
 lvim.keys.normal_mode["<esc><esc>"] = ":w<cr><c-w>o"
 
 -- run code
-lvim.keys.normal_mode["<F10>"] = ":RunCode<cr>"
-lvim.keys.normal_mode["<F9>"] = ":RunFile<cr>"
-lvim.keys.normal_mode["<F8>"] = ":RunProject<cr>"
-lvim.keys.normal_mode["<leader>xc"] = ":RunCode<cr>"
-lvim.keys.normal_mode["<leader>xf"] = ":RunFile<cr>"
-lvim.keys.normal_mode["<leader>xp"] = ":RunProject<cr>"
+lvim.keys.normal_mode["<F10>"] = ":w<cr>:RunCode<cr>"
+lvim.keys.normal_mode["<F9>"] = ":w<cr>:RunFile<cr>"
+lvim.keys.normal_mode["<F8>"] = ":w<cr>:RunProject<cr>"
+lvim.keys.normal_mode["<leader>xc"] = ":w<cr>:RunCode<cr>"
+lvim.keys.normal_mode["<leader>xf"] = ":w<cr>:RunFile<cr>"
+lvim.keys.normal_mode["<leader>xp"] = ":w<cr>:RunProject<cr>"
 
 -- move between buffers
 lvim.keys.normal_mode["L"] = ":BufferLineCycleNext<cr>"
@@ -52,9 +52,9 @@ lvim.keys.normal_mode["<leader>j"] = { "/<><cr>xs" }
 -- -- Use which-key to add extra bindings with the leader-key prefix
 -- lvim.builtin.which_key.mappings["W"] = { "<cmd>noautocmd w<cr>", "Save without formatting" }
 lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<cr>", "Projects" }
-lvim.builtin.which_key.mappings["xf"] = { "<cmd>RunFile<cr>", "Execute File (F9)" }
-lvim.builtin.which_key.mappings["xc"] = { "<cmd>RunCode<cr>", "Execute Code (F10)" }
-lvim.builtin.which_key.mappings["xp"] = { "<cmd>RunProject<cr>", "Execute Project (F8)" }
+lvim.builtin.which_key.mappings["xf"] = { "<cmd>w|RunFile<cr>", "Execute File (F9)" }
+lvim.builtin.which_key.mappings["xc"] = { "<cmd>w|RunCode<cr>", "Execute Code (F10)" }
+lvim.builtin.which_key.mappings["xp"] = { "<cmd>w|RunProject<cr>", "Execute Project (F8)" }
 lvim.builtin.which_key.mappings["j"] = { "/<><cr>xs", "Jump to the next <> marker" }
 
 -- -- Change theme settings
@@ -98,9 +98,11 @@ lvim.builtin.treesitter.auto_install = true
 --   buf_set_option("omnifunc", "v:lua.vim.lsp.omnifunc")
 -- end
 
-require("user.plugins.load")
-require("user.plugins.code-runner")
 require("user.actions")
 require("user.formatters")
 require("user.linters")
 require("user.autocmd")
+
+require("user.plugins.load")
+require("user.plugins.debugger")
+require("user.plugins.code-runner")

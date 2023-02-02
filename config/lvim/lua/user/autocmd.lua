@@ -41,7 +41,8 @@ A.nvim_create_autocmd("BufEnter", {
 vim.cmd [[ autocmd BufWritePre * %s/\s\+$//e ]]
 
 -- Split vertically
-A.nvim_create_autocmd("WinNew", {
+A.nvim_create_autocmd({ "WinNew", "FileType" }, {
+    pattern = "help",
     callback = function()
         A.nvim_command("wincmd L")
     end
