@@ -1,15 +1,10 @@
---[[
- THESE ARE EXAMPLE CONFIGS FEEL FREE TO CHANGE TO WHATEVER YOU WANT
- `lvim` is the global options object
-]]
-
 -- vim options
 vim.opt.shiftwidth = 4
 vim.opt.tabstop = 4
 vim.opt.relativenumber = true
 vim.opt.wrap = false
 vim.opt.splitright = true
-vim.opt.splitbelow = false
+vim.opt.splitbelow = true
 vim.opt.completeopt = "menuone,noselect"
 vim.opt.shell = "/bin/bash"
 vim.api.nvim_command("set formatoptions-=cro")
@@ -23,48 +18,9 @@ lvim.format_on_save = {
 -- to disable icons and use a minimalist setup, uncomment the following
 -- lvim.use_icons = false
 
--- keymappings <https://www.lunarvim.org/docs/configuration/keybindings>
 lvim.leader = ";"
 
--- ctrl-s save
-lvim.keys.normal_mode["<c-s>"] = ":w<cr>"
-
--- close windows except current (if editor)
-lvim.keys.normal_mode["<esc><esc>"] = ":w<cr><c-w>o"
-
--- run code
-lvim.keys.normal_mode["<F10>"] = ":w<cr>:RunCode<cr>"
-lvim.keys.normal_mode["<F9>"] = ":w<cr>:RunFile<cr>"
-lvim.keys.normal_mode["<F8>"] = ":w<cr>:RunProject<cr>"
-lvim.keys.normal_mode["<leader>xc"] = ":w<cr>:RunCode<cr>"
-lvim.keys.normal_mode["<leader>xf"] = ":w<cr>:RunFile<cr>"
-lvim.keys.normal_mode["<leader>xp"] = ":w<cr>:RunProject<cr>"
-
--- move between buffers
-lvim.keys.normal_mode["L"] = ":BufferLineCycleNext<cr>"
-lvim.keys.normal_mode["H"] = ":BufferLineCyclePrev<cr>"
-lvim.keys.normal_mode["W"] = ":BufferKill<cr>"
-
--- jumping to the next <>
-lvim.keys.insert_mode["<leader>j"] = { "<esc>/<><cr>xs" }
-lvim.keys.normal_mode["<leader>j"] = { "/<><cr>xs" }
-
--- -- Use which-key to add extra bindings with the leader-key prefix
--- lvim.builtin.which_key.mappings["W"] = { "<cmd>noautocmd w<cr>", "Save without formatting" }
-lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<cr>", "Projects" }
-lvim.builtin.which_key.mappings["xf"] = { "<cmd>w|RunFile<cr>", "Execute File (F9)" }
-lvim.builtin.which_key.mappings["xc"] = { "<cmd>w|RunCode<cr>", "Execute Code (F10)" }
-lvim.builtin.which_key.mappings["xp"] = { "<cmd>w|RunProject<cr>", "Execute Project (F8)" }
-lvim.builtin.which_key.mappings["j"] = { "/<><cr>xs", "Jump to the next <> marker" }
-
 -- -- Change theme settings
--- lvim.colorscheme = "tokyonight-night"
-
-lvim.builtin.alpha.active = true
-lvim.builtin.alpha.mode = "dashboard"
-lvim.builtin.terminal.active = true
-lvim.builtin.nvimtree.setup.view.side = "left"
-lvim.builtin.nvimtree.setup.renderer.icons.show.git = true
 
 -- Automatically install missing parsers when entering buffer
 lvim.builtin.treesitter.auto_install = true
@@ -98,10 +54,12 @@ lvim.builtin.treesitter.auto_install = true
 --   buf_set_option("omnifunc", "v:lua.vim.lsp.omnifunc")
 -- end
 
+require("user.theme")
+require("user.keymaps")
+require("user.autocmd")
 require("user.actions")
 require("user.formatters")
 require("user.linters")
-require("user.autocmd")
 
 require("user.plugins.load")
 require("user.plugins.debugger")

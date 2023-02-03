@@ -1,17 +1,5 @@
 -- [[ Graphical debugger setup ]]
 
--- Automatic DAP UI
-local dap, dapui = require("dap"), require("dapui")
-dap.listeners.after.event_initialized["dapui_config"] = function()
-    dapui.open({})
-end
-dap.listeners.before.event_terminated["dapui_config"] = function()
-    dapui.close({})
-end
-dap.listeners.before.event_exited["dapui_config"] = function()
-    dapui.close({})
-end
-
 -- Debugging python
 require("mason-nvim-dap").setup({
     ensure_installed = { "python", },
@@ -20,7 +8,7 @@ require("mason-nvim-dap").setup({
 
 require('mason-nvim-dap').setup_handlers()
 require("nvim-dap-virtual-text").setup({})
-require("dapui").setup({
+lvim.builtin.dap.ui.config = {
     icons = { expanded = "", collapsed = "", current_frame = "" },
     mappings = {
         -- Use a table to apply multiple mappings
@@ -58,16 +46,16 @@ require("dapui").setup({
                 "breakpoints",
                 "stacks",
             },
-            size = 50,
+            size = 0.3,
             position = "left",
         },
         {
             elements = {
-                "repl",
+                -- "repl",
                 -- "console",
             },
-            size = 18,
-            position = "bottom",
+            size = 0.2,
+            position = "right",
         },
     },
     controls = {
@@ -99,4 +87,4 @@ require("dapui").setup({
         max_type_length = nil, -- Can be integer or nil.
         max_value_lines = 100, -- Can be integer or nil.
     }
-})
+}

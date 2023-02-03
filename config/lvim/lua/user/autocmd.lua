@@ -10,7 +10,7 @@ A.nvim_create_autocmd("FileType", {
 })
 
 -- Focus on main window when exiting terminal
-A.nvim_create_autocmd("TermClose", {
+A.nvim_create_autocmd("WinLeave", {
     callback = function()
         A.nvim_command("wincmd p")
     end
@@ -42,8 +42,32 @@ vim.cmd [[ autocmd BufWritePre * %s/\s\+$//e ]]
 
 -- Split vertically
 A.nvim_create_autocmd({ "WinNew", "FileType" }, {
-    pattern = "help",
+    pattern = {
+        "help",
+        "python",
+        "text",
+        "lua",
+        "bash",
+        ""
+    },
     callback = function()
         A.nvim_command("wincmd L")
+    end
+})
+
+-- Mutually exclude explorer and debugger UI
+
+-- debugger closes all other windows
+A.nvim_create_autocmd({ "WinNew", "FileType" }, {
+    pattern = "dap*",
+    callback = function()
+        A.nvim_command("NvimTreeClose")
+    end
+})
+
+A.nvim_create_autocmd({ "WinNew", "FileType" }, {
+    pattern = "NvimTree",
+    callback = function()
+        require("dapui").close()
     end
 })
