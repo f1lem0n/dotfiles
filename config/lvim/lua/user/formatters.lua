@@ -1,7 +1,7 @@
 local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
     {
-        command = "blue",
+        command = "autopep8",
     },
     {
         command = "isort",

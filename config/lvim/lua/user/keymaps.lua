@@ -1,11 +1,11 @@
 -- ctrl-s save
 lvim.keys.normal_mode["<c-s>"] = ":w<cr>"
 
--- quit vim instantly
-lvim.keys.normal_mode["<leader>Q"] = ":qa!<cr>"
+-- -- quit vim instantly
+-- lvim.keys.normal_mode["<leader>Q"] = ":qa!<cr>"
 
--- close windows except current (if editor)
-lvim.keys.normal_mode["<esc><esc>"] = ":w<cr><c-w>o"
+-- -- close windows except current (if editor)
+-- lvim.keys.normal_mode["<esc><esc>"] = ":w<cr><c-w>o"
 
 -- run code
 lvim.keys.normal_mode["<F10>"] = ":w<cr>:RunCode<cr>"
