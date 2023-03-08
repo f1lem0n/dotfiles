@@ -1,0 +1,4 @@
+name: sc
+channels:
+  - defaults
+prefix: /home/f1lem0n/miniconda3/envs/sc
