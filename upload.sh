@@ -26,4 +26,5 @@ NOW=$( date '+%F %H:%M:%S' )
 git add .
 git commit -m"manual upload [$NOW]"
 git push
+echo $(git config remote.origin.url)
 echo "..."
