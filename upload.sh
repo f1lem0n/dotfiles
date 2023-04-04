@@ -21,7 +21,6 @@ done
 echo "..."
 
 # commit changes and push to github
-push to github
 printf "\n[GIT]\n"
 NOW=$( date '+%F_%H:%M:%S' )
 git add .
