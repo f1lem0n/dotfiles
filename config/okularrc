@@ -194,33 +194,34 @@ shadeSortColumn=true
 contrast=4
 
 [MainWindow]
-State=AAAA/wAAAAD9AAAAAAAAB3oAAAO5AAAABAAAAAQAAAAIAAAACPwAAAADAAAAAQAAAAEAAAAsAHEAdQBpAGMAawBBAG4AbgBvAHQAYQB0AGkAbwBuAFQAbwBvAGwAQgBhAHICAAAAAP////8AAAAAAAAAAAAAAAIAAAABAAAAFgBtAGEAaQBuAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAAAAAAAAAAAIAAAABAAAAIgBhAG4AbgBvAHQAYQB0AGkAbwBuAFQAbwBvAGwAQgBhAHIAAAAAAP////8AAAAAAAAAAA==
+RestorePositionForNextInstance=false
+State=AAAA/wAAAAD9AAAAAAAAB3oAAAOUAAAABAAAAAQAAAAIAAAACPwAAAADAAAAAQAAAAEAAAAsAHEAdQBpAGMAawBBAG4AbgBvAHQAYQB0AGkAbwBuAFQAbwBvAGwAQgBhAHICAAAAAP////8AAAAAAAAAAAAAAAIAAAABAAAAFgBtAGEAaQBuAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAAAAAAAAAAAIAAAABAAAAIgBhAG4AbgBvAHQAYQB0AGkAbwBuAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAAAAAAA==
 ToolBarsMovable=Disabled
-eDP-1 Height 1920x1080 eDP-1=1015
-eDP-1 Width 1920x1080 eDP-1=954
+eDP-1 Height 1920x1080 eDP-1=451
+eDP-1 Width 1920x1080 eDP-1=512
 eDP-1 Window-Maximized 1920x1080 eDP-1=true
 
 [Recent Files]
-File1[$e]=$HOME/OneDrive/STUDIES/MGR/SEM II/Scientific Computing/SCPythonL1.pdf
-File10[$e]=$HOME/OneDrive/STUDIES/MGR/BC/eksperymenty/wydajnosc-prod/analysis.pdf
-File2[$e]=$HOME/OneDrive/STUDIES/MGR/SEM II/Biologia Molekularna/2/Chromatin_modifications_in_metabolic_disease.pdf
-File3[$e]=$HOME/OneDrive/BOOKS/MATH/Richard Rusczyk - Art of Problem Solving Precalculus-Art of Problem Solving (2009).pdf
-File4[$e]=$HOME/OneDrive/BOOKS/MATH/Richard Rusczyk - Introduction to algebra (the art of problem solving)-AoPS Incorporated (2007).pdf
-File5[$e]=$HOME/Downloads/!!A biologists guide to statistical thinking and analysis.pdf
-File6[$e]=$HOME/Downloads/A1_Eisner reproducibility in science 2018.pdf
-File7[$e]=$HOME/OneDrive/STUDIES/MGR/SEM II/Metodologia/melas1/A1_Eisner reproducibility in science 2018.pdf
-File8[$e]=$HOME/OneDrive/STUDIES/MGR/BC/protokoly/immobilizacja/out/immobilizacja.pdf
-File9[$e]=$HOME/OneDrive/STUDIES/MGR/SEM II/Biologia Molekularna/4/CRISPR1 nature.pdf
-Name1[$e]=SCPythonL1.pdf
-Name10[$e]=analysis.pdf
-Name2[$e]=Chromatin_modifications_in_metabolic_disease.pdf
-Name3[$e]=Richard Rusczyk - Art of Problem Solving Precalculus-Art of Problem Solving (2009).pdf
-Name4[$e]=Richard Rusczyk - Introduction to algebra (the art of problem solving)-AoPS Incorporated (2007).pdf
-Name5[$e]=!!A biologists guide to statistical thinking and analysis.pdf
-Name6[$e]=A1_Eisner reproducibility in science 2018.pdf
-Name7[$e]=A1_Eisner reproducibility in science 2018.pdf
-Name8[$e]=immobilizacja.pdf
-Name9[$e]=CRISPR1 nature.pdf
+File1[$e]=$HOME/OneDrive/BOOKS/MATH/Richard Rusczyk - Introduction to algebra (the art of problem solving)-AoPS Incorporated (2007).pdf
+File10[$e]=$HOME/OneDrive/STUDIES/MGR/BC/protokoly/immobilizacja.pdf
+File2[$e]=$HOME/Downloads/!!A biologists guide to statistical thinking and analysis.pdf
+File3[$e]=$HOME/Downloads/A1_Eisner reproducibility in science 2018.pdf
+File4[$e]=$HOME/OneDrive/STUDIES/MGR/SEM II/Metodologia/melas1/A1_Eisner reproducibility in science 2018.pdf
+File5[$e]=$HOME/OneDrive/STUDIES/MGR/BC/protokoly/immobilizacja/out/immobilizacja.pdf
+File6[$e]=$HOME/OneDrive/STUDIES/MGR/SEM II/Biologia Molekularna/4/CRISPR1 nature.pdf
+File7[$e]=$HOME/OneDrive/STUDIES/MGR/BC/eksperymenty/wydajnosc-prod/analysis.pdf
+File8[$e]=$HOME/OneDrive/STUDIES/MGR/BC/protokoly/plastyfikacja.pdf
+File9[$e]=$HOME/OneDrive/STUDIES/MGR/SEM II/Scientific Computing/SCPythonL2.pdf
+Name1[$e]=Richard Rusczyk - Introduction to algebra (the art of problem solving)-AoPS Incorporated (2007).pdf
+Name10[$e]=immobilizacja.pdf
+Name2[$e]=!!A biologists guide to statistical thinking and analysis.pdf
+Name3[$e]=A1_Eisner reproducibility in science 2018.pdf
+Name4[$e]=A1_Eisner reproducibility in science 2018.pdf
+Name5[$e]=immobilizacja.pdf
+Name6[$e]=CRISPR1 nature.pdf
+Name7[$e]=analysis.pdf
+Name8[$e]=plastyfikacja.pdf
+Name9[$e]=SCPythonL2.pdf
 
 [WM]
 activeBackground=49,54,59
