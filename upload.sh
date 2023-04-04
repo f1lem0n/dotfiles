@@ -22,8 +22,8 @@ echo "..."
 
 # commit changes and push to github
 printf "\n[GIT]\n"
-NOW=$( date '+%F_%H:%M:%S' )
+NOW=$( date '+%F %H:%M:%S' )
 git add .
-git commit -m"manual upload $NOW"
+git commit -m"manual upload [$NOW]"
 git push
 echo "..."
