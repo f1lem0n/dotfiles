@@ -1,8 +1,8 @@
 #!/bin/bash
-alias l='ls -lhX'
+alias ll='ls -lhX'
 alias lg='ls -gh'
 alias la='ls -lAhX'
-alias vi='lvim'
-alias lv='lvim'
+alias vi='nvim'
 alias src='source $HOME/.bashrc'
-alias o='cd $(find . -type d | fzf)'
+alias fcd='cd $(find . -type d | fzf)'
+alias mysql='mysql --help'
