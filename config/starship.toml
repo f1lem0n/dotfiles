@@ -20,7 +20,7 @@ error_symbol = "[ ❱❱❱](bold 1)"
 
 # No need for env variables as starship provides a way to show your current distro
 [os]
-format ='[  ](bold white)'
+format = '[  ](bold white)'
 disabled = false
 
 # Shows the username
@@ -28,7 +28,7 @@ disabled = false
 style_user = "white bold"
 style_root = "black bold"
 format = "[$user]($style) "
-disabled = true  # disable in powershell
+disabled = true             # disable in powershell
 show_always = false
 
 [directory]
@@ -51,7 +51,7 @@ format = '[\[$all_status$ahead_behind\]]($style) '
 style = "bold green"
 conflicted = "  "
 up_to_date = "  "
-untracked =  "  "
+untracked = "  "
 ahead = "  ${count} "
 diverged = "  ${ahead_count}  ${behind_count} "
 behind = "  ${count} "
@@ -60,29 +60,6 @@ modified = "  "
 staged = '[ ++\($count\) ](green)'
 renamed = "  "
 deleted = "  "
-
-[terraform]
-format = "via [ terraform $version]($style) 壟 [$workspace]($style) "
-
-[vagrant]
-format = "via [ vagrant $version]($style) "
-
-[docker_context]
-format = "via [ $context](bold blue) "
-
-[helm]
-format = "via [ $version](bold purple) "
-
-[python]
-symbol = "󰌠 "
-python_binary = "python3"
-
-[nodejs]
-format = "via [󰎙 $version](bold green) "
-disabled = true
-
-[ruby]
-format = "via [ $version]($style) "
 
 [kubernetes]
 format = 'on [ $context\($namespace\)](bold purple) '
@@ -94,7 +71,11 @@ disabled = false
 [conda]
 format = '[$symbol$environment](dimmed green) '
 ignore_base = false
-symbol = " "
+symbol = "🐍 "
+
+[python]
+symbol = "󰌠 "
+python_binary = "python3"
 
 [rlang]
 symbol = "󰟔 "
@@ -128,3 +109,22 @@ symbol = " "
 
 [fossil_branch]
 symbol = " "
+
+[terraform]
+format = "via [ terraform $version]($style) 壟 [$workspace]($style) "
+
+[vagrant]
+format = "via [ vagrant $version]($style) "
+
+[docker_context]
+format = "via [ $context](bold blue) "
+
+[helm]
+format = "via [ $version](bold purple) "
+
+[nodejs]
+format = "via [󰎙 $version](bold green) "
+disabled = true
+
+[ruby]
+format = "via [ $version]($style) "
