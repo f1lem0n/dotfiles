@@ -98,7 +98,6 @@ if ! shopt -oq posix; then
 fi
 
 # enable bash_aliases
-
 if [ -f "$HOME/.bash_aliases" ]; then
     . "$HOME/.bash_aliases"
 fi

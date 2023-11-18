@@ -1,34 +1,47 @@
-# My config files and more
+# My configuration files
 
 ## Supported OS
+- Debian 11 (Bullseye)
+- Debian 12 (Bookworm)
+- Debian on WSL
 
-- Debian based
+## Config description
 
-## Structure
+### Directory structure
 
 ```
-dotfiles
-├── apt
+$ tree
+.
 ├── config
-│   └── lvim  
-├── env
+│   ├── okularrc
+│   └── starship.toml
 ├── home
 ├── local
-│   └── user-bin
-└── templates
+│   └── bin
+│       └── frm
+├── other
+│   └── windows-terminal
+│       └── settings.json
+└── README.md
 ```
 
-## How to use
+### config/okularrc
+- Okular configuration file
+- Target location: `~/.config/okularrc`
 
-1. First time downloading
-   
-   ```bash
-   git clone https://github.com/f1lem0n/dotfiles.git
-   cd dotfiles
-   ./download.sh
-   ```
-2. then all you need to do to update dotfiles is to run `./download.sh` inside the repo folder
-3. If you want to modify this repository and push it to your own github you should modify `set-config.sh` and then run it `./set-config.sh`.
-4. You can modify your dotfiles in your filesystem outside repo folder. When you are done just run `./upload.sh` inside the repo folder. This script will copy all the files you modified to the repo folder, commit and push all the changes for you.
-5. *Note that if you wish to add new files to the repo you need to do it **manually***!
+### config/starship.toml
+- [Starship](https://starship.rs/) prompt theme configuration file
+- Target location: `~/.config/starship.toml`
 
+### dotfiles in home/
+- Config files for: bash, conda, git
+- Target location: `~/`
+
+### local/bin/
+- Simple scripts for personal use
+- Target location: `~/.local/bin/`
+
+### other/windows-terminal/settings.json
+- Windows Terminal configuration file
+- This is used primarily for WSL
+- Target location: `<SYSTEM_DISK>:\Users\<USER>\AppData\Local\Packages\<MICROSOFT_TERMINAL_DIRECTORY>\LocalState\settings.json`

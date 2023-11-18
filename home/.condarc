@@ -1,1 +1,5 @@
-auto_activate_base: false
+channels:
+  - defaults
+  - bioconda
+  - daler
+  - conda-forge
