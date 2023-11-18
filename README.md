@@ -45,3 +45,7 @@ $ tree
 - Windows Terminal configuration file
 - This is used primarily for WSL
 - Target location: `<SYSTEM_DISK>:\Users\<USER>\AppData\Local\Packages\<MICROSOFT_TERMINAL_DIRECTORY>\LocalState\settings.json`
+
+### other/vscode/default.code-profile
+- VSCode profile
+- To use simply import a profile in VSCode
