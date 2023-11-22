@@ -5,8 +5,11 @@ add_newline = true
 
 # Change the default prompt format
 format = """\
-[┏╸ ](white)$os\
-$all[┗╸ $time](white)$character"""
+[┏╸ ](white)$os $all\
+[┗╸ $time](white)$character"""
+
+[battery]
+disabled = true
 
 [time]
 time_format = "%T"
