@@ -126,5 +126,5 @@ unset __conda_setup
 eval `keychain --agents ssh --eval id_rsa`
 
 # use starship theme
-eval "$(starship init bash")
+eval "$(starship init bash)"
 
