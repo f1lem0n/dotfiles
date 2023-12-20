@@ -12,3 +12,4 @@ alias fcd='cd $(find . -type d | fzf)'
 alias grep="grep --color=auto"
 alias mysql="mysql --help"
 alias src="source $HOME/.zshrc"
+alias update="sudo apt update && sudo apt upgrade"
