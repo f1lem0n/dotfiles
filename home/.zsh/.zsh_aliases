@@ -7,6 +7,7 @@ alias la="lsd -lAhX"
 
 # other
 alias cat="batcat"
+alias du="ncdu"
 alias fcd='cd $(find . -type d | fzf)'
 alias grep="grep --color=auto"
 alias mysql="mysql --help"
