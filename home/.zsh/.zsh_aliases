@@ -1,7 +1,8 @@
-#!/bin/bash
+#!/usr/bin/zsh
 alias ll='ls -lhX'
 alias lg='ls -gh'
 alias la='ls -lAhX'
-alias src='source $HOME/.bashrc'
+alias src='source $HOME/.zshrc'
 alias fcd='cd $(find . -type d | fzf)'
 alias mysql='mysql --help'
+alias bat="batcat"
