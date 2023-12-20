@@ -5,3 +5,4 @@ fi
 
 # remove unnecessary files at the end of the session
 rm $HOME/.lesshst
+rm $HOME/.sudo_as_admin_successful
