@@ -1,8 +1,13 @@
 #!/usr/bin/zsh
+
+# ls
 alias ls="lsd"
 alias ll="lsd -lhX"
 alias la="lsd -lAhX"
-alias src="source $HOME/.zshrc"
+
+# other
+alias cat="batcat"
 alias fcd='cd $(find . -type d | fzf)'
+alias grep="grep --color=auto"
 alias mysql="mysql --help"
-alias bat="batcat"
+alias src="source $HOME/.zshrc"
