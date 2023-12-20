@@ -4,5 +4,6 @@ if [ "$SHLVL" = 1 ]; then
 fi
 
 # remove unnecessary files at the end of the session
-rm $HOME/.lesshst
-rm $HOME/.sudo_as_admin_successful
+rm -rf $HOME/.lesshst
+rm -rf $HOME/.sudo_as_admin_successful
+rm -rf $HOME/.python_history
