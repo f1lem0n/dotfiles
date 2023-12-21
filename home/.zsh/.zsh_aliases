@@ -6,6 +6,8 @@ alias ll="lsd -lhX"
 alias la="lsd -lAhX"
 
 # other
+alias vi="nvim"
+alias tree="tre"
 alias cat="batcat"
 alias du="ncdu"
 alias fcd='cd $(find . -type d | fzf)'
