@@ -4,3 +4,4 @@ channels:
   - daler
   - conda-forge
 env_prompt: ''
+changeps1: false
