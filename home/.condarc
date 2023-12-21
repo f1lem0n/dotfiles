@@ -3,3 +3,4 @@ channels:
   - bioconda
   - daler
   - conda-forge
+env_prompt: ''
