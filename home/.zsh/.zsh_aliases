@@ -6,9 +6,10 @@ alias ll="lsd -lhX"
 alias la="lsd -lAhX"
 
 # other
+alias exp="explorer.exe"
 alias vi="nvim"
-alias tree="tre"
-alias cat="batcat"
+alias tree="tre -a"
+alias bat="batcat"
 alias du="ncdu"
 alias fcd='cd $(find . -type d | fzf)'
 alias grep="grep --color=auto"

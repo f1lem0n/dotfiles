@@ -46,6 +46,7 @@ setopt HIST_FIND_NO_DUPS         # Do not display a line previously found.
 setopt HIST_IGNORE_SPACE         # Don't record an entry starting with a space.
 setopt HIST_SAVE_NO_DUPS         # Don't write duplicate entries in the history file.
 setopt HIST_REDUCE_BLANKS        # Remove superfluous blanks before recording entry.
+setopt +o nomatch 		 # Remove globbing warning when no matches are found.
 # <<< history settings <<<
 
 # >>> aliases >>>
@@ -106,4 +107,5 @@ ZSH_HIGHLIGHT_STYLES[assign]=none
 eval `keychain --agents ssh --eval id_rsa`
 # Starship Prompt Theme
 eval "$(starship init zsh)"
+export PATH=$PATH:$HOME/.local/share/USalign/
 # <<< OTHER <<<
